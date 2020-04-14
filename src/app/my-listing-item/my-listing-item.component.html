@@ -1,0 +1,9 @@
+<div class="content-box">
+    <h3>{{listing.name}}</h3>
+    <p>{{listing.description}}</p>
+    <p>${{listing.price}}</p>
+    <div class="buttons-container">
+        <button (click)="onEditClicked.emit(listing.id)">Edit</button>
+        <button (click)="onDeleteClicked.emit(listing.id)">Delete</button>
+    </div>
+</div>

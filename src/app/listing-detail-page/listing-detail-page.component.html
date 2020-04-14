@@ -1,0 +1,16 @@
+<div *ngIf="listing; then listingDetail else noListing"></div>
+<ng-template #listingDetail>
+    <div class="content-box">
+        <button (click)="goBack()">Back</button>
+        <h2>{{listing.name}}</h2>
+        <p>{{listing.description}}</p>
+        <p>${{listing.price}}</p>
+        <button (click)="goToContactPage()">Contact Seller</button>
+    </div>
+</ng-template>
+<ng-template #noListing>
+    <h1 *ngIf="isLoading; else notFound">Loading...</h1>
+    <ng-template #notFound>
+        <h2>Listing not found!</h2>
+    </ng-template>
+</ng-template>

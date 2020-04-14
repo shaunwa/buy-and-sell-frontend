@@ -1,0 +1,6 @@
+<app-my-listing-item *ngFor="let listing of listings"
+    [listing]="listing"
+    (onEditClicked)="onEditListing($event)"
+    (onDeleteClicked)="onDeleteListing($event)">
+</app-my-listing-item>
+<button (click)="onCreateListing()">Create New Listing</button>

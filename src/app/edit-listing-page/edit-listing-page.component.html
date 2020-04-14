@@ -1,0 +1,27 @@
+<div *ngIf="isLoading">
+    <h1>Loading...</h1>
+</div>
+<div *ngIf="!isLoading" class="content-box">
+    <h2>Edit Listing</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">
+                Name:
+            </label>
+            <input id="name" name="name" type="text" [(ngModel)]="name" />
+        </div>
+        <div>
+            <label for="description">
+                Description:
+            </label>
+            <input id="description" name="description" type="text" [(ngModel)]="description" />
+        </div>
+        <div>
+            <label for="price">
+                Price:
+            </label>
+            <input id="price" name="price" type="text" [(ngModel)]="price" />
+        </div>
+        <button type="submit">Submit Changes</button>
+    </form>
+</div>
